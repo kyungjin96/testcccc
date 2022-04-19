@@ -9,6 +9,6 @@ int fun() {
 
 int main()
 {
-    int b = fun();
+    const int &b = fun();
     return 0;
 }
