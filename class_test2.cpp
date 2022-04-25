@@ -52,9 +52,20 @@ class ABC :public AB {
 
 };
 
+class abc :public ABC{
+    public :
+
+    int add(int x, int y){
+        return x-y;
+    }
+};
+
+
+
 int main (){
 
-    ABC ab;
+    abc ab;
+    
     cout << ab.add(1,2) <<endl ;
     return 0;
 }

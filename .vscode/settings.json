@@ -60,6 +60,7 @@
         "typeinfo": "cpp",
         "valarray": "cpp",
         "codecvt": "cpp",
-        "filesystem": "cpp"
+        "filesystem": "cpp",
+        "random": "cpp"
     }
 }
