@@ -17,7 +17,7 @@ using std::vector;
 
 int main() {
 	string line;
-	ifstream file("./example.txt");
+	ifstream file(".//ex//example.txt");
 
 
     
