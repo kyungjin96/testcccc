@@ -3,14 +3,25 @@
 using namespace std;
 
 int main(){
-string str1;
-
-string str2 = "C++ Programming";
-str2.append(" hello");
+    int except_num = 2;
+    int *ptr = &except_num;
 
  
+    for(int i = 0; i <= 100; i++)
+    
+{
+    int *ptr2 = &i;
+    if (i % except_num == 0)
 
-cout << "문자열 str1의 길이는 " << str2.length() << "입니다." << endl;
-cout << str2 << endl;
-cout << "문자열 str2의 길이는 " << str2.size() << "입니다.";
+    {
+
+        continue;
+
+    }
+
+    cout << i << " "<<endl;
+    cout << ptr2 <<endl;
+
+}
+
 }
