@@ -1,0 +1,11 @@
+MODULE NAME :  aa
+inputs :  a, b
+outputs :  c
+inouts :  d
+MODULE NAME :  bb
+inputs :  a1
+inputs :  a2
+inputs :  a3
+outputs :  a4
+inouts :  a7
+inouts :  a8

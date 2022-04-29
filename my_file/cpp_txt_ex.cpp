@@ -17,12 +17,10 @@ using std::vector;
 
 int main() {
 	string line;
-	ifstream file(".//ex//example.txt");
+	ifstream file("/home/kyungjin/kj__/testcccc/my_file/example.txt");
 
 
     
-
-
     cout << "테스트중입니다" << endl;
 
 

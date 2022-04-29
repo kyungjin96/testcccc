@@ -1,0 +1,6 @@
+MODULE NAME :  aa
+outputs :  a, b
+inouts :  d
+MODULE NAME :  bb
+inouts :  a7
+inouts :  a8
