@@ -13,7 +13,7 @@ int main()
     int count=0;
     string line;
     vector<string> arr;
-    string str ;
+   string str ;
     vector<string> list1;
     string sr;
 
@@ -23,10 +23,10 @@ int main()
             if(line.find("end") == string::npos){
                 line = line.substr(6,3);
                 arr.push_back("MODULE NAME : "+line);
-            }
+            
         
       
-           } else if(line.find("input") != string::npos){
+            if(line.find("input") != string::npos){
             line = line.substr(0, line.length()-1);
             line = line.substr(5);                
             arr.push_back("inputs : "+line);
@@ -46,6 +46,8 @@ int main()
                 arr.push_back("inouts : "+line);
             }
       }
+    }
+    }
       for(int i=0; i<<list1.size(); i++){
         arr.push_back("inputs : "+list1[i]);
         cout << list1[i] << endl;

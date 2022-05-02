@@ -21,6 +21,6 @@ string time() {
    // convert now to string form
    string dt = ctime(&now);
 
-   cout << "The local date and time is: " << dt << endl;
+//    cout << "The local date and time is: " << dt << endl;
     return dt;
 }
