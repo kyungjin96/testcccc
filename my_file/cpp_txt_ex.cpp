@@ -33,9 +33,9 @@ int main() {
 
             ++count;            
             string st = "line_num" + to_string(count) + " ";
-            const char *C = st.c_str();
+            // const char *C = st.c_str();
 
-            b.push_back(C + line);
+            b.push_back(st + line);
 
 		}
 
