@@ -30,11 +30,8 @@ int main() {
 
 	if(file.is_open()){
 		while(getline(file, line)) {
-            int line_test = line.find("^");
-            int line_test2 = line.find(">");
-            ++count;
-            
-    
+
+            ++count;            
             string st = "line_num" + to_string(count) + " ";
             const char *C = st.c_str();
 
