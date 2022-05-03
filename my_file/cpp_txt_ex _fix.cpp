@@ -10,29 +10,38 @@ using namespace std;
 
 using std::vector;
 
-
-
-int main() {
-	string line;
-	ifstream file("/home/kyungjin/kj__/testcccc/my_file/example.txt");
+class filee {
+    public:
+    string line;
+    string line_2 ;
     vector <string> a;
     vector <string> b; 
     int count =0;
     char cc=0;
     string st;
+    time_t now = time(0);
+    string dt = ctime(&now);
+    string out_file = "line_file_" + dt.substr(11,8) + ".txt";
+    string tt = "/home/kyungjin/kj__/testcccc/my_file/"+ out_file;
+    string last_file ="last_file_" + dt.substr(11,8) + ".txt";
+    const char *C = out_file.c_str();
+    const char *CC = tt.c_str();
+    const char *ccc = last_file.c_str();
+    string linee();
+    void output();
 
-    
-    cout << "테스트중입니다" << endl;
 
 
+};
 
-	if(file.is_open()){
+string filee::linee(){
+
+
+        ifstream file("/home/kyungjin/kj__/testcccc/my_file/example.txt");
+    	if(file.is_open()){
 		while(getline(file, line)) {
-
             ++count;            
             string st = "line_num" + to_string(count) + " ";
-            // const char *C = st.c_str();
-
             b.push_back(st + line);
 
 		}
@@ -40,16 +49,10 @@ int main() {
 		
 	} else {
 		cout << "Unable to open file";
-		return 1;
+
         
 	} file.close();
 
-
-    time_t now = time(0);
-    
-    string dt = ctime(&now);
-    string out_file = "line_file_" + dt.substr(11,8) + ".txt";
-    const char *C = out_file.c_str();
     ofstream false_file(C);
 
     for (int i = 0; i< b.size(); i++){ 
@@ -59,43 +62,34 @@ int main() {
                 str += "\n";    
             }
         false_file.write(str.c_str(), str.size());
-        // false_file.close();
 
     }false_file.close();
+    return out_file;
+}
 
-string tt = "/home/kyungjin/kj__/testcccc/my_file/"+out_file;
-const char *CC = tt.c_str();
+
+void filee::output(){
+
 ifstream next_file(CC);
 
-
-string line_2 ;
 if(next_file.is_open()){
 		while(getline(next_file, line_2)) {
             int line_test = line_2.find("^");
             int line_test2 = line_2.find(">");
-            // cout << line_2<<endl;
            
             if(line_test > 0 or line_test2 > 0){
                 a.push_back(line_2);
       
                cout << line_2 << " F" << endl;
-               
-            //    ofstream false_file("false_file.txt");
-            //    false_file << line << " F" ;
-               
+                             
             }
             else {
                 cout << line_2 << " T" << endl;
                 
-            // }
-
-
-
 		}
 }
 }
-string last_file ="last_file_" + dt.substr(11,8) + ".txt";
-const char *ccc = last_file.c_str();
+
 ofstream last_ff(ccc);
     for (int i = 0; i< a.size(); i++){ 
         string str2 = a[i];
@@ -108,9 +102,15 @@ ofstream last_ff(ccc);
 
     }last_ff.close();
 
+}
 
 
+int main() {
 
+    filee f;
+    f.linee();
+    f.output();
+    return 0;
 }
 
 
