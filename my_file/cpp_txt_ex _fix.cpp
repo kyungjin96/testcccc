@@ -21,14 +21,16 @@ class filee {
     string st;
     time_t now = time(0);
     string dt = ctime(&now);
-    string out_file = "line_file_" + dt.substr(11,8) + ".txt";
-    string tt = "/home/kyungjin/kj__/testcccc/my_file/"+ out_file;
-    string last_file ="last_file_" + dt.substr(11,8) + ".txt";
     const char *C = out_file.c_str();
     const char *CC = tt.c_str();
     const char *ccc = last_file.c_str();
+    string out_file = "line_file_" + dt.substr(11,8) + ".txt";
+    string tt = "/home/kyungjin/kj__/testcccc/my_file/"+ out_file;
+    string last_file ="last_file_" + dt.substr(11,8) + ".txt";
     string linee();
     void output();
+
+    
 
 
 
@@ -90,7 +92,8 @@ if(next_file.is_open()){
 }
 }
 
-ofstream last_ff(ccc);
+    ofstream last_ff(ccc);
+
     for (int i = 0; i< a.size(); i++){ 
         string str2 = a[i];
            if (i != a.size() - 1)
