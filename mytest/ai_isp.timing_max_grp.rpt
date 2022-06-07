@@ -1,0 +1,919 @@
+ 
+****************************************
+Report : timing
+        -path full_clock_expanded
+        -delay max
+        -input_pins
+        -nets
+        -slack_lesser_than 0.0000
+        -max_paths 1
+        -transition_time
+Design : ai_isp
+Version: P-2019.03-SP5
+Date   : Tue Feb 22 00:22:59 2022
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: ss_0p900v_m40c   Library: sc12_cmos28lpp_base_rvt_c34_ss_nominal_max_0p900v_m40c_sadhm
+Wire Load Model Mode: top
+
+  Startpoint: u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_reg/dp2reg_consumer_reg
+              (rising edge-triggered flip-flop clocked by MCLK)
+  Endpoint: u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/clk_gate_strip_cnt_total_reg_1/latch
+            (gating element for clock MCLK)
+  Path Group: **clock_gating_default**
+  Path Type: max
+
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock MCLK (rise edge)                                          0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_reg/dp2reg_consumer_reg/CK (DFFRPQ_X4M_A12TR)   0.0000   0.0000 #   0.0000 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_reg/dp2reg_consumer_reg/Q (DFFRPQ_X4M_A12TR)   0.0133   0.1085   0.1085 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_reg/n1622 (net)     2   0.0000   0.1085 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_reg/U86/A (INV_X5M_A12TR)   0.0133   0.0000   0.1085 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_reg/U86/Y (INV_X5M_A12TR)   0.0308   0.0252   0.1337 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_reg/n678 (net)     2   0.0000   0.1337 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_reg/U75/A (INV_X11M_A12TR)   0.0308   0.0000   0.1337 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_reg/U75/Y (INV_X11M_A12TR)   0.0143   0.0199   0.1536 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_reg/n675 (net)     8   0.0000   0.1536 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_reg/U37/S0 (MXIT2_X3M_A12TR)   0.0143   0.0000   0.1536 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_reg/U37/Y (MXIT2_X3M_A12TR)   0.1403   0.0759   0.2295 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_reg/reg2dp_kernel_stride_width[1] (net)    16   0.0000   0.2295 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_reg/reg2dp_kernel_stride_width[1] (UX_DLA_PDP_reg)   0.0000   0.2295 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/reg2dp_kernel_stride_width[1] (net)   0.0000   0.2295 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/reg2dp_kernel_stride_width[1] (UX_DLA_PDP_core)   0.0000   0.2295 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/reg2dp_kernel_stride_width[1] (net)   0.0000   0.2295 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/reg2dp_kernel_stride_width[1] (UX_DLA_PDP_CORE_cal1d)   0.0000   0.2295 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/reg2dp_kernel_stride_width[1] (net)   0.0000   0.2295 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U25/B (NOR2_X2A_A12TR)   0.1403   0.0000   0.2295 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U25/Y (NOR2_X2A_A12TR)   0.0350   0.0511   0.2806 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/n3253 (net)     3   0.0000   0.2806 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U27/A (NOR3_X2M_A12TR)   0.0350   0.0000   0.2806 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U27/Y (NOR3_X2M_A12TR)   0.0562   0.0485   0.3291 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/n3245 (net)     2   0.0000   0.3291 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U317/A0 (OA21_X3M_A12TR)   0.0562   0.0000   0.3291 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U317/Y (OA21_X3M_A12TR)   0.0210   0.0599   0.3890 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/n4733 (net)     1   0.0000   0.3890 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U318/A (NOR2_X6B_A12TR)   0.0210   0.0000   0.3890 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U318/Y (NOR2_X6B_A12TR)   0.0248   0.0226   0.4116 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/n3404 (net)     3   0.0000   0.4116 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U1707/A (INV_X6M_A12TR)   0.0248   0.0000   0.4116 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U1707/Y (INV_X6M_A12TR)   0.0415   0.0359   0.4474 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/n3381 (net)    17   0.0000   0.4474 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U1679/A (NAND2_X2M_A12TR)   0.0415   0.0000   0.4474 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U1679/Y (NAND2_X2M_A12TR)   0.0221   0.0259   0.4734 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/n4696 (net)     1   0.0000   0.4734 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U1710/B0 (OAI21_X4M_A12TR)   0.0221   0.0000   0.4734 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U1710/Y (OAI21_X4M_A12TR)   0.0403   0.0286   0.5020 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/n4695 (net)     1   0.0000   0.5020 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U1694/A (XNOR2_X4M_A12TR)   0.0403   0.0000   0.5020 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U1694/Y (XNOR2_X4M_A12TR)   0.0771   0.0477   0.5497 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/n3637 (net)     6   0.0000   0.5497 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U1572/A (INV_X4M_A12TR)   0.0771   0.0000   0.5497 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U1572/Y (INV_X4M_A12TR)   0.0231   0.0320   0.5817 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/n3565 (net)     4   0.0000   0.5817 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U1711/A (XNOR2_X3M_A12TR)   0.0231   0.0000   0.5817 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U1711/Y (XNOR2_X3M_A12TR)   0.0260   0.0419   0.6236 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/n3266 (net)     2   0.0000   0.6236 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U1685/A (NOR2_X2A_A12TR)   0.0260   0.0000   0.6236 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U1685/Y (NOR2_X2A_A12TR)   0.0464   0.0405   0.6641 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/n3331 (net)     2   0.0000   0.6641 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U148/B0 (AO21A1AI2_X4M_A12TR)   0.0464   0.0000   0.6641 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U148/Y (AO21A1AI2_X4M_A12TR)   0.0248   0.0343   0.6984 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/n3357 (net)     3   0.0000   0.6984 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U1458/A (NAND2_X2A_A12TR)   0.0248   0.0000   0.6984 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U1458/Y (NAND2_X2A_A12TR)   0.0292   0.0290   0.7273 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/n3321 (net)     3   0.0000   0.7273 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U1708/A (NOR2_X4B_A12TR)   0.0292   0.0000   0.7273 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U1708/Y (NOR2_X4B_A12TR)   0.0188   0.0232   0.7505 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/n3285 (net)     2   0.0000   0.7505 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U1372/A (NAND2_X2B_A12TR)   0.0188   0.0000   0.7505 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U1372/Y (NAND2_X2B_A12TR)   0.0230   0.0220   0.7725 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/n3267 (net)     1   0.0000   0.7725 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U1289/A (NAND2_X3A_A12TR)   0.0230   0.0000   0.7725 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U1289/Y (NAND2_X3A_A12TR)   0.0222   0.0230   0.7955 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/n3398 (net)     5   0.0000   0.7955 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U256/A1 (AOI21_X2M_A12TR)   0.0222   0.0000   0.7955 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U256/Y (AOI21_X2M_A12TR)   0.0394   0.0456   0.8411 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/n3402 (net)     3   0.0000   0.8411 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U1684/A (NAND3_X1M_A12TR)   0.0394   0.0000   0.8411 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U1684/Y (NAND3_X1M_A12TR)   0.0249   0.0280   0.8691 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/n3382 (net)     1   0.0000   0.8691 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U1683/C0 (AO21A1AI2_X1M_A12TR)   0.0249   0.0000   0.8691 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U1683/Y (AO21A1AI2_X1M_A12TR)   0.0814   0.0442   0.9133 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/n3396 (net)     2   0.0000   0.9133 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U267/A (NAND2_X1M_A12TR)   0.0814   0.0000   0.9133 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U267/Y (NAND2_X1M_A12TR)   0.0308   0.0394   0.9527 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/n3394 (net)     1   0.0000   0.9527 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U1686/B0 (OAI211_X2M_A12TR)   0.0308   0.0000   0.9527 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U1686/Y (OAI211_X2M_A12TR)   0.0646   0.0457   0.9984 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/n4671 (net)     2   0.0000   0.9984 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U1719/A (XNOR2_X1M_A12TR)   0.0646   0.0000   0.9984 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U1719/Y (XNOR2_X1M_A12TR)   0.0888   0.0650   1.0634 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/n3743 (net)     3   0.0000   1.0634 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U378/A (NAND4_X2A_A12TR)   0.0888   0.0000   1.0634 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U378/Y (NAND4_X2A_A12TR)   0.0402   0.0481   1.1114 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/n4693 (net)     1   0.0000   1.1114 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U379/A (INV_X2M_A12TR)   0.0402   0.0000   1.1114 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U379/Y (INV_X2M_A12TR)   0.0271   0.0333   1.1448 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/n3417 (net)     1   0.0000   1.1448 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U326/A (NAND3_X6A_A12TR)   0.0271   0.0000   1.1448 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U326/Y (NAND3_X6A_A12TR)   0.0355   0.0325   1.1773 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/n4585 (net)    10   0.0000   1.1773 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U8/A (NAND2_X1M_A12TR_C34)   0.0355   0.0000   1.1773 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U8/Y (NAND2_X1M_A12TR_C34)   0.0398   0.0393   1.2166 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/n4750 (net)     1   0.0000   1.2166 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U1723/A (INV_X2M_A12TR)   0.0398   0.0000   1.2166 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U1723/Y (INV_X2M_A12TR)   0.0175   0.0235   1.2402 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/n4263 (net)     6   0.0000   1.2402 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U294/A (NAND2_X1A_A12TR)   0.0175   0.0000   1.2402 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/U294/Y (NAND2_X1A_A12TR)   0.0194   0.0195   1.2597 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/n4639 (net)     1   0.0000   1.2597 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/clk_gate_strip_cnt_total_reg_1/EN (SNPS_CLOCK_GATE_HIGH_UX_DLA_PDP_CORE_cal1d_16)   0.0000   1.2597 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/clk_gate_strip_cnt_total_reg_1/EN (net)   0.0000   1.2597 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/clk_gate_strip_cnt_total_reg_1/latch/E (PREICG_X4B_A12TR)   0.0194   0.0000   1.2597 r
+  data arrival time                                                          1.2597
+
+  clock MCLK (rise edge)                                          1.3750     1.3750
+  clock network delay (ideal)                                     0.0000     1.3750
+  clock uncertainty                                              -0.0688     1.3062
+  u_func_top/u_nxsf_top/uxdla_top/u_core_o/u_UX_DLA_pdp/u_core/u_cal1d/clk_gate_strip_cnt_total_reg_1/latch/CK (PREICG_X4B_A12TR)   0.0000   1.3062 r
+  clock gating setup time                                        -0.0632     1.2431
+  data required time                                                         1.2431
+  ------------------------------------------------------------------------------------
+  data required time                                                         1.2431
+  data arrival time                                                         -1.2597
+  ------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                          -0.0166
+
+
+  Startpoint: u_func_top/u_ddr_if/u_uniquify_phy
+              (rising edge-triggered flip-flop clocked by u_func_top/u_ddr_if/u_uniquify_phy/half_rate_clk_addr_phy)
+  Endpoint: u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/reg_rdata_apb_reg_26_
+            (rising edge-triggered flip-flop clocked by APB_CLK_D4)
+  Path Group: APB_CLK_D4
+  Path Type: max
+
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock u_func_top/u_ddr_if/u_uniquify_phy/half_rate_clk_addr_phy (rise edge)   9.6250   9.6250
+  clock network delay (ideal)                                     0.0000     9.6250
+  u_func_top/u_ddr_if/u_uniquify_phy/half_rate_clk_addr_phy (dfi_top_wrapper)   0.0000   0.0000   9.6250 r
+  u_func_top/u_ddr_if/u_uniquify_phy/PRDATA[26] (dfi_top_wrapper)   0.0155   0.8442  10.4692 r
+  u_func_top/u_ddr_if/oPRDATA_PHY[26] (net)     1                 0.0000    10.4692 r
+  u_func_top/u_ddr_if/oPRDATA_PHY[26] (ddr_if)                    0.0000    10.4692 r
+  u_func_top/prdata_phy[26] (net)                                 0.0000    10.4692 r
+  u_func_top/u_cm3_proc/iPRDATA_PHY[26] (cm3_proc_CORE_NO2_AHB_NO7_APB_NO22_SCU_NO1_WDOG_NO1_PWM_NO1_ADC_NO0_TIMER_NO4_GPIO_NO2_UART_NO2_SPI_NO1_I2C_NO2_IRDA_NO0_I2CS_NO1_APB_SLICE4096_CURR_DATE0_CURR_TIME0)   0.0000  10.4692 r
+  u_func_top/u_cm3_proc/iPRDATA_PHY[26] (net)                     0.0000    10.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/iPRDATA14[26] (ahb2apb)         0.0000    10.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/iPRDATA14[26] (net)             0.0000    10.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/PRDATA14[26] (cmsdk_apb_slave_mux_PORT0_ENABLE1_PORT1_ENABLE1_PORT2_ENABLE1_PORT3_ENABLE1_PORT4_ENABLE1_PORT5_ENABLE1_PORT6_ENABLE1_PORT7_ENABLE1_PORT8_ENABLE1_PORT9_ENABLE1_PORT10_ENABLE1_PORT11_ENABLE1_PORT12_ENABLE1_PORT13_ENABLE1_PORT14_ENABLE1_PORT15_ENABLE1)   0.0000  10.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/PRDATA14[26] (net)   0.0000  10.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/U21/A (NAND2_X6M_A12TR)   0.0155   0.0000  10.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/U21/Y (NAND2_X6M_A12TR)   0.0137   0.0139  10.4831 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/n132 (net)     1   0.0000  10.4831 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/U22/A (NAND2_X4A_A12TR)   0.0137   0.0000  10.4831 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/U22/Y (NAND2_X4A_A12TR)   0.0233   0.0170  10.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/PRDATA[26] (net)     1   0.0000  10.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/PRDATA[26] (cmsdk_apb_slave_mux_PORT0_ENABLE1_PORT1_ENABLE1_PORT2_ENABLE1_PORT3_ENABLE1_PORT4_ENABLE1_PORT5_ENABLE1_PORT6_ENABLE1_PORT7_ENABLE1_PORT8_ENABLE1_PORT9_ENABLE1_PORT10_ENABLE1_PORT11_ENABLE1_PORT12_ENABLE1_PORT13_ENABLE1_PORT14_ENABLE1_PORT15_ENABLE1)   0.0000  10.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/prdata[26] (net)                0.0000    10.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/iPRDATA[26] (apb_arb)   0.0000  10.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/iPRDATA[26] (net)     0.0000    10.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/U25/A (INV_X4M_A12TR)   0.0233   0.0000  10.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/U25/Y (INV_X4M_A12TR)   0.0080   0.0125  10.5126 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/n84 (net)     2       0.0000    10.5126 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/U27/A (INV_X2M_A12TR)   0.0080   0.0000  10.5126 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/U27/Y (INV_X2M_A12TR)   0.0115   0.0118  10.5244 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/oPRDATA_1[26] (net)     1   0.0000  10.5244 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/oPRDATA_1[26] (apb_arb)   0.0000  10.5244 r
+  u_func_top/u_cm3_proc/u_ahb2apb/oPRDATA_1[26] (net)             0.0000    10.5244 r
+  u_func_top/u_cm3_proc/u_ahb2apb/oPRDATA_1[26] (ahb2apb)         0.0000    10.5244 r
+  u_func_top/u_cm3_proc/prdata_i2cs[26] (net)                     0.0000    10.5244 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/iPRDATA[26] (i2cs_ahbm_apbm)   0.0000  10.5244 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/iPRDATA[26] (net)        0.0000    10.5244 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/U375/A (NAND2_X2M_A12TR)   0.0115   0.0000  10.5244 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/U375/Y (NAND2_X2M_A12TR)   0.0181   0.0118  10.5362 f
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/n1364 (net)     1        0.0000    10.5362 f
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/U32/A (NAND2_X1A_A12TR)   0.0181   0.0000  10.5362 f
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/U32/Y (NAND2_X1A_A12TR)   0.0213   0.0203  10.5565 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/n827 (net)     1         0.0000    10.5565 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/reg_rdata_apb_reg_26_/D (DFFRPQ_X3M_A12TR)   0.0213   0.0000  10.5565 r
+  data arrival time                                                         10.5565
+
+  clock APB_CLK_D4 (rise edge)                                   11.0000    11.0000
+  clock network delay (ideal)                                     0.0000    11.0000
+  clock uncertainty                                              -0.5500    10.4500
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/reg_rdata_apb_reg_26_/CK (DFFRPQ_X3M_A12TR)   0.0000  10.4500 r
+  library setup time                                             -0.0505    10.3995
+  data required time                                                        10.3995
+  ------------------------------------------------------------------------------------
+  data required time                                                        10.3995
+  data arrival time                                                        -10.5565
+  ------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                          -0.1570
+
+
+  Startpoint: u_func_top/u_ddr_if/u_uniquify_phy
+              (rising edge-triggered flip-flop clocked by u_func_top/u_ddr_if/u_uniquify_phy/half_rate_clk_addr_phy)
+  Endpoint: u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/reg_rdata_apb_reg_26_
+            (rising edge-triggered flip-flop clocked by APB_CLK_D8)
+  Path Group: APB_CLK_D8
+  Path Type: max
+
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock u_func_top/u_ddr_if/u_uniquify_phy/half_rate_clk_addr_phy (rise edge)  20.6250  20.6250
+  clock network delay (ideal)                                     0.0000    20.6250
+  u_func_top/u_ddr_if/u_uniquify_phy/half_rate_clk_addr_phy (dfi_top_wrapper)   0.0000   0.0000  20.6250 r
+  u_func_top/u_ddr_if/u_uniquify_phy/PRDATA[26] (dfi_top_wrapper)   0.0155   0.8442  21.4692 r
+  u_func_top/u_ddr_if/oPRDATA_PHY[26] (net)     1                 0.0000    21.4692 r
+  u_func_top/u_ddr_if/oPRDATA_PHY[26] (ddr_if)                    0.0000    21.4692 r
+  u_func_top/prdata_phy[26] (net)                                 0.0000    21.4692 r
+  u_func_top/u_cm3_proc/iPRDATA_PHY[26] (cm3_proc_CORE_NO2_AHB_NO7_APB_NO22_SCU_NO1_WDOG_NO1_PWM_NO1_ADC_NO0_TIMER_NO4_GPIO_NO2_UART_NO2_SPI_NO1_I2C_NO2_IRDA_NO0_I2CS_NO1_APB_SLICE4096_CURR_DATE0_CURR_TIME0)   0.0000  21.4692 r
+  u_func_top/u_cm3_proc/iPRDATA_PHY[26] (net)                     0.0000    21.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/iPRDATA14[26] (ahb2apb)         0.0000    21.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/iPRDATA14[26] (net)             0.0000    21.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/PRDATA14[26] (cmsdk_apb_slave_mux_PORT0_ENABLE1_PORT1_ENABLE1_PORT2_ENABLE1_PORT3_ENABLE1_PORT4_ENABLE1_PORT5_ENABLE1_PORT6_ENABLE1_PORT7_ENABLE1_PORT8_ENABLE1_PORT9_ENABLE1_PORT10_ENABLE1_PORT11_ENABLE1_PORT12_ENABLE1_PORT13_ENABLE1_PORT14_ENABLE1_PORT15_ENABLE1)   0.0000  21.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/PRDATA14[26] (net)   0.0000  21.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/U21/A (NAND2_X6M_A12TR)   0.0155   0.0000  21.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/U21/Y (NAND2_X6M_A12TR)   0.0137   0.0139  21.4831 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/n132 (net)     1   0.0000  21.4831 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/U22/A (NAND2_X4A_A12TR)   0.0137   0.0000  21.4831 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/U22/Y (NAND2_X4A_A12TR)   0.0233   0.0170  21.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/PRDATA[26] (net)     1   0.0000  21.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/PRDATA[26] (cmsdk_apb_slave_mux_PORT0_ENABLE1_PORT1_ENABLE1_PORT2_ENABLE1_PORT3_ENABLE1_PORT4_ENABLE1_PORT5_ENABLE1_PORT6_ENABLE1_PORT7_ENABLE1_PORT8_ENABLE1_PORT9_ENABLE1_PORT10_ENABLE1_PORT11_ENABLE1_PORT12_ENABLE1_PORT13_ENABLE1_PORT14_ENABLE1_PORT15_ENABLE1)   0.0000  21.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/prdata[26] (net)                0.0000    21.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/iPRDATA[26] (apb_arb)   0.0000  21.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/iPRDATA[26] (net)     0.0000    21.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/U25/A (INV_X4M_A12TR)   0.0233   0.0000  21.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/U25/Y (INV_X4M_A12TR)   0.0080   0.0125  21.5126 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/n84 (net)     2       0.0000    21.5126 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/U27/A (INV_X2M_A12TR)   0.0080   0.0000  21.5126 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/U27/Y (INV_X2M_A12TR)   0.0115   0.0118  21.5244 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/oPRDATA_1[26] (net)     1   0.0000  21.5244 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/oPRDATA_1[26] (apb_arb)   0.0000  21.5244 r
+  u_func_top/u_cm3_proc/u_ahb2apb/oPRDATA_1[26] (net)             0.0000    21.5244 r
+  u_func_top/u_cm3_proc/u_ahb2apb/oPRDATA_1[26] (ahb2apb)         0.0000    21.5244 r
+  u_func_top/u_cm3_proc/prdata_i2cs[26] (net)                     0.0000    21.5244 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/iPRDATA[26] (i2cs_ahbm_apbm)   0.0000  21.5244 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/iPRDATA[26] (net)        0.0000    21.5244 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/U375/A (NAND2_X2M_A12TR)   0.0115   0.0000  21.5244 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/U375/Y (NAND2_X2M_A12TR)   0.0181   0.0118  21.5362 f
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/n1364 (net)     1        0.0000    21.5362 f
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/U32/A (NAND2_X1A_A12TR)   0.0181   0.0000  21.5362 f
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/U32/Y (NAND2_X1A_A12TR)   0.0213   0.0203  21.5565 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/n827 (net)     1         0.0000    21.5565 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/reg_rdata_apb_reg_26_/D (DFFRPQ_X3M_A12TR)   0.0213   0.0000  21.5565 r
+  data arrival time                                                         21.5565
+
+  clock APB_CLK_D8 (rise edge)                                   22.0000    22.0000
+  clock network delay (ideal)                                     0.0000    22.0000
+  clock uncertainty                                              -0.8800    21.1200
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/reg_rdata_apb_reg_26_/CK (DFFRPQ_X3M_A12TR)   0.0000  21.1200 r
+  library setup time                                             -0.0505    21.0695
+  data required time                                                        21.0695
+  ------------------------------------------------------------------------------------
+  data required time                                                        21.0695
+  data arrival time                                                        -21.5565
+  ------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                          -0.4869
+
+
+  Startpoint: u_func_top/u_ddr_if/u_uniquify_phy
+              (rising edge-triggered flip-flop clocked by u_func_top/u_ddr_if/u_uniquify_phy/half_rate_clk_addr_phy)
+  Endpoint: u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/reg_rdata_apb_reg_26_
+            (rising edge-triggered flip-flop clocked by APB_CLK_D12)
+  Path Group: APB_CLK_D12
+  Path Type: max
+
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock u_func_top/u_ddr_if/u_uniquify_phy/half_rate_clk_addr_phy (rise edge)   9.6250   9.6250
+  clock network delay (ideal)                                     0.0000     9.6250
+  u_func_top/u_ddr_if/u_uniquify_phy/half_rate_clk_addr_phy (dfi_top_wrapper)   0.0000   0.0000   9.6250 r
+  u_func_top/u_ddr_if/u_uniquify_phy/PRDATA[26] (dfi_top_wrapper)   0.0155   0.8442  10.4692 r
+  u_func_top/u_ddr_if/oPRDATA_PHY[26] (net)     1                 0.0000    10.4692 r
+  u_func_top/u_ddr_if/oPRDATA_PHY[26] (ddr_if)                    0.0000    10.4692 r
+  u_func_top/prdata_phy[26] (net)                                 0.0000    10.4692 r
+  u_func_top/u_cm3_proc/iPRDATA_PHY[26] (cm3_proc_CORE_NO2_AHB_NO7_APB_NO22_SCU_NO1_WDOG_NO1_PWM_NO1_ADC_NO0_TIMER_NO4_GPIO_NO2_UART_NO2_SPI_NO1_I2C_NO2_IRDA_NO0_I2CS_NO1_APB_SLICE4096_CURR_DATE0_CURR_TIME0)   0.0000  10.4692 r
+  u_func_top/u_cm3_proc/iPRDATA_PHY[26] (net)                     0.0000    10.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/iPRDATA14[26] (ahb2apb)         0.0000    10.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/iPRDATA14[26] (net)             0.0000    10.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/PRDATA14[26] (cmsdk_apb_slave_mux_PORT0_ENABLE1_PORT1_ENABLE1_PORT2_ENABLE1_PORT3_ENABLE1_PORT4_ENABLE1_PORT5_ENABLE1_PORT6_ENABLE1_PORT7_ENABLE1_PORT8_ENABLE1_PORT9_ENABLE1_PORT10_ENABLE1_PORT11_ENABLE1_PORT12_ENABLE1_PORT13_ENABLE1_PORT14_ENABLE1_PORT15_ENABLE1)   0.0000  10.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/PRDATA14[26] (net)   0.0000  10.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/U21/A (NAND2_X6M_A12TR)   0.0155   0.0000  10.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/U21/Y (NAND2_X6M_A12TR)   0.0137   0.0139  10.4831 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/n132 (net)     1   0.0000  10.4831 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/U22/A (NAND2_X4A_A12TR)   0.0137   0.0000  10.4831 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/U22/Y (NAND2_X4A_A12TR)   0.0233   0.0170  10.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/PRDATA[26] (net)     1   0.0000  10.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/PRDATA[26] (cmsdk_apb_slave_mux_PORT0_ENABLE1_PORT1_ENABLE1_PORT2_ENABLE1_PORT3_ENABLE1_PORT4_ENABLE1_PORT5_ENABLE1_PORT6_ENABLE1_PORT7_ENABLE1_PORT8_ENABLE1_PORT9_ENABLE1_PORT10_ENABLE1_PORT11_ENABLE1_PORT12_ENABLE1_PORT13_ENABLE1_PORT14_ENABLE1_PORT15_ENABLE1)   0.0000  10.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/prdata[26] (net)                0.0000    10.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/iPRDATA[26] (apb_arb)   0.0000  10.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/iPRDATA[26] (net)     0.0000    10.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/U25/A (INV_X4M_A12TR)   0.0233   0.0000  10.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/U25/Y (INV_X4M_A12TR)   0.0080   0.0125  10.5126 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/n84 (net)     2       0.0000    10.5126 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/U27/A (INV_X2M_A12TR)   0.0080   0.0000  10.5126 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/U27/Y (INV_X2M_A12TR)   0.0115   0.0118  10.5244 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/oPRDATA_1[26] (net)     1   0.0000  10.5244 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/oPRDATA_1[26] (apb_arb)   0.0000  10.5244 r
+  u_func_top/u_cm3_proc/u_ahb2apb/oPRDATA_1[26] (net)             0.0000    10.5244 r
+  u_func_top/u_cm3_proc/u_ahb2apb/oPRDATA_1[26] (ahb2apb)         0.0000    10.5244 r
+  u_func_top/u_cm3_proc/prdata_i2cs[26] (net)                     0.0000    10.5244 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/iPRDATA[26] (i2cs_ahbm_apbm)   0.0000  10.5244 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/iPRDATA[26] (net)        0.0000    10.5244 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/U375/A (NAND2_X2M_A12TR)   0.0115   0.0000  10.5244 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/U375/Y (NAND2_X2M_A12TR)   0.0181   0.0118  10.5362 f
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/n1364 (net)     1        0.0000    10.5362 f
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/U32/A (NAND2_X1A_A12TR)   0.0181   0.0000  10.5362 f
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/U32/Y (NAND2_X1A_A12TR)   0.0213   0.0203  10.5565 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/n827 (net)     1         0.0000    10.5565 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/reg_rdata_apb_reg_26_/D (DFFRPQ_X3M_A12TR)   0.0213   0.0000  10.5565 r
+  data arrival time                                                         10.5565
+
+  clock APB_CLK_D12 (rise edge)                                  11.0000    11.0000
+  clock network delay (ideal)                                     0.0000    11.0000
+  clock uncertainty                                              -0.5500    10.4500
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/reg_rdata_apb_reg_26_/CK (DFFRPQ_X3M_A12TR)   0.0000  10.4500 r
+  library setup time                                             -0.0505    10.3995
+  data required time                                                        10.3995
+  ------------------------------------------------------------------------------------
+  data required time                                                        10.3995
+  data arrival time                                                        -10.5565
+  ------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                          -0.1570
+
+
+  Startpoint: u_func_top/u_ddr_if/u_uniquify_phy
+              (rising edge-triggered flip-flop clocked by u_func_top/u_ddr_if/u_uniquify_phy/half_rate_clk_addr_phy)
+  Endpoint: u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/reg_rdata_apb_reg_26_
+            (rising edge-triggered flip-flop clocked by APB_CLK_D21)
+  Path Group: APB_CLK_D21
+  Path Type: max
+
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock u_func_top/u_ddr_if/u_uniquify_phy/half_rate_clk_addr_phy (rise edge)   9.6250   9.6250
+  clock network delay (ideal)                                     0.0000     9.6250
+  u_func_top/u_ddr_if/u_uniquify_phy/half_rate_clk_addr_phy (dfi_top_wrapper)   0.0000   0.0000   9.6250 r
+  u_func_top/u_ddr_if/u_uniquify_phy/PRDATA[26] (dfi_top_wrapper)   0.0155   0.8442  10.4692 r
+  u_func_top/u_ddr_if/oPRDATA_PHY[26] (net)     1                 0.0000    10.4692 r
+  u_func_top/u_ddr_if/oPRDATA_PHY[26] (ddr_if)                    0.0000    10.4692 r
+  u_func_top/prdata_phy[26] (net)                                 0.0000    10.4692 r
+  u_func_top/u_cm3_proc/iPRDATA_PHY[26] (cm3_proc_CORE_NO2_AHB_NO7_APB_NO22_SCU_NO1_WDOG_NO1_PWM_NO1_ADC_NO0_TIMER_NO4_GPIO_NO2_UART_NO2_SPI_NO1_I2C_NO2_IRDA_NO0_I2CS_NO1_APB_SLICE4096_CURR_DATE0_CURR_TIME0)   0.0000  10.4692 r
+  u_func_top/u_cm3_proc/iPRDATA_PHY[26] (net)                     0.0000    10.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/iPRDATA14[26] (ahb2apb)         0.0000    10.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/iPRDATA14[26] (net)             0.0000    10.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/PRDATA14[26] (cmsdk_apb_slave_mux_PORT0_ENABLE1_PORT1_ENABLE1_PORT2_ENABLE1_PORT3_ENABLE1_PORT4_ENABLE1_PORT5_ENABLE1_PORT6_ENABLE1_PORT7_ENABLE1_PORT8_ENABLE1_PORT9_ENABLE1_PORT10_ENABLE1_PORT11_ENABLE1_PORT12_ENABLE1_PORT13_ENABLE1_PORT14_ENABLE1_PORT15_ENABLE1)   0.0000  10.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/PRDATA14[26] (net)   0.0000  10.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/U21/A (NAND2_X6M_A12TR)   0.0155   0.0000  10.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/U21/Y (NAND2_X6M_A12TR)   0.0137   0.0139  10.4831 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/n132 (net)     1   0.0000  10.4831 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/U22/A (NAND2_X4A_A12TR)   0.0137   0.0000  10.4831 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/U22/Y (NAND2_X4A_A12TR)   0.0233   0.0170  10.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/PRDATA[26] (net)     1   0.0000  10.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/PRDATA[26] (cmsdk_apb_slave_mux_PORT0_ENABLE1_PORT1_ENABLE1_PORT2_ENABLE1_PORT3_ENABLE1_PORT4_ENABLE1_PORT5_ENABLE1_PORT6_ENABLE1_PORT7_ENABLE1_PORT8_ENABLE1_PORT9_ENABLE1_PORT10_ENABLE1_PORT11_ENABLE1_PORT12_ENABLE1_PORT13_ENABLE1_PORT14_ENABLE1_PORT15_ENABLE1)   0.0000  10.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/prdata[26] (net)                0.0000    10.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/iPRDATA[26] (apb_arb)   0.0000  10.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/iPRDATA[26] (net)     0.0000    10.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/U25/A (INV_X4M_A12TR)   0.0233   0.0000  10.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/U25/Y (INV_X4M_A12TR)   0.0080   0.0125  10.5126 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/n84 (net)     2       0.0000    10.5126 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/U27/A (INV_X2M_A12TR)   0.0080   0.0000  10.5126 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/U27/Y (INV_X2M_A12TR)   0.0115   0.0118  10.5244 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/oPRDATA_1[26] (net)     1   0.0000  10.5244 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/oPRDATA_1[26] (apb_arb)   0.0000  10.5244 r
+  u_func_top/u_cm3_proc/u_ahb2apb/oPRDATA_1[26] (net)             0.0000    10.5244 r
+  u_func_top/u_cm3_proc/u_ahb2apb/oPRDATA_1[26] (ahb2apb)         0.0000    10.5244 r
+  u_func_top/u_cm3_proc/prdata_i2cs[26] (net)                     0.0000    10.5244 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/iPRDATA[26] (i2cs_ahbm_apbm)   0.0000  10.5244 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/iPRDATA[26] (net)        0.0000    10.5244 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/U375/A (NAND2_X2M_A12TR)   0.0115   0.0000  10.5244 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/U375/Y (NAND2_X2M_A12TR)   0.0181   0.0118  10.5362 f
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/n1364 (net)     1        0.0000    10.5362 f
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/U32/A (NAND2_X1A_A12TR)   0.0181   0.0000  10.5362 f
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/U32/Y (NAND2_X1A_A12TR)   0.0213   0.0203  10.5565 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/n827 (net)     1         0.0000    10.5565 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/reg_rdata_apb_reg_26_/D (DFFRPQ_X3M_A12TR)   0.0213   0.0000  10.5565 r
+  data arrival time                                                         10.5565
+
+  clock APB_CLK_D21 (rise edge)                                  11.0000    11.0000
+  clock network delay (ideal)                                     0.0000    11.0000
+  clock uncertainty                                              -0.5500    10.4500
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/reg_rdata_apb_reg_26_/CK (DFFRPQ_X3M_A12TR)   0.0000  10.4500 r
+  library setup time                                             -0.0505    10.3995
+  data required time                                                        10.3995
+  ------------------------------------------------------------------------------------
+  data required time                                                        10.3995
+  data arrival time                                                        -10.5565
+  ------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                          -0.1570
+
+
+  Startpoint: u_func_top/u_ddr_if/u_uniquify_phy
+              (rising edge-triggered flip-flop clocked by u_func_top/u_ddr_if/u_uniquify_phy/half_rate_clk_addr_phy)
+  Endpoint: u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/reg_rdata_apb_reg_26_
+            (rising edge-triggered flip-flop clocked by APB_CLK_D22)
+  Path Group: APB_CLK_D22
+  Path Type: max
+
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock u_func_top/u_ddr_if/u_uniquify_phy/half_rate_clk_addr_phy (rise edge)  20.6250  20.6250
+  clock network delay (ideal)                                     0.0000    20.6250
+  u_func_top/u_ddr_if/u_uniquify_phy/half_rate_clk_addr_phy (dfi_top_wrapper)   0.0000   0.0000  20.6250 r
+  u_func_top/u_ddr_if/u_uniquify_phy/PRDATA[26] (dfi_top_wrapper)   0.0155   0.8442  21.4692 r
+  u_func_top/u_ddr_if/oPRDATA_PHY[26] (net)     1                 0.0000    21.4692 r
+  u_func_top/u_ddr_if/oPRDATA_PHY[26] (ddr_if)                    0.0000    21.4692 r
+  u_func_top/prdata_phy[26] (net)                                 0.0000    21.4692 r
+  u_func_top/u_cm3_proc/iPRDATA_PHY[26] (cm3_proc_CORE_NO2_AHB_NO7_APB_NO22_SCU_NO1_WDOG_NO1_PWM_NO1_ADC_NO0_TIMER_NO4_GPIO_NO2_UART_NO2_SPI_NO1_I2C_NO2_IRDA_NO0_I2CS_NO1_APB_SLICE4096_CURR_DATE0_CURR_TIME0)   0.0000  21.4692 r
+  u_func_top/u_cm3_proc/iPRDATA_PHY[26] (net)                     0.0000    21.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/iPRDATA14[26] (ahb2apb)         0.0000    21.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/iPRDATA14[26] (net)             0.0000    21.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/PRDATA14[26] (cmsdk_apb_slave_mux_PORT0_ENABLE1_PORT1_ENABLE1_PORT2_ENABLE1_PORT3_ENABLE1_PORT4_ENABLE1_PORT5_ENABLE1_PORT6_ENABLE1_PORT7_ENABLE1_PORT8_ENABLE1_PORT9_ENABLE1_PORT10_ENABLE1_PORT11_ENABLE1_PORT12_ENABLE1_PORT13_ENABLE1_PORT14_ENABLE1_PORT15_ENABLE1)   0.0000  21.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/PRDATA14[26] (net)   0.0000  21.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/U21/A (NAND2_X6M_A12TR)   0.0155   0.0000  21.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/U21/Y (NAND2_X6M_A12TR)   0.0137   0.0139  21.4831 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/n132 (net)     1   0.0000  21.4831 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/U22/A (NAND2_X4A_A12TR)   0.0137   0.0000  21.4831 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/U22/Y (NAND2_X4A_A12TR)   0.0233   0.0170  21.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/PRDATA[26] (net)     1   0.0000  21.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/PRDATA[26] (cmsdk_apb_slave_mux_PORT0_ENABLE1_PORT1_ENABLE1_PORT2_ENABLE1_PORT3_ENABLE1_PORT4_ENABLE1_PORT5_ENABLE1_PORT6_ENABLE1_PORT7_ENABLE1_PORT8_ENABLE1_PORT9_ENABLE1_PORT10_ENABLE1_PORT11_ENABLE1_PORT12_ENABLE1_PORT13_ENABLE1_PORT14_ENABLE1_PORT15_ENABLE1)   0.0000  21.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/prdata[26] (net)                0.0000    21.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/iPRDATA[26] (apb_arb)   0.0000  21.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/iPRDATA[26] (net)     0.0000    21.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/U25/A (INV_X4M_A12TR)   0.0233   0.0000  21.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/U25/Y (INV_X4M_A12TR)   0.0080   0.0125  21.5126 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/n84 (net)     2       0.0000    21.5126 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/U27/A (INV_X2M_A12TR)   0.0080   0.0000  21.5126 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/U27/Y (INV_X2M_A12TR)   0.0115   0.0118  21.5244 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/oPRDATA_1[26] (net)     1   0.0000  21.5244 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/oPRDATA_1[26] (apb_arb)   0.0000  21.5244 r
+  u_func_top/u_cm3_proc/u_ahb2apb/oPRDATA_1[26] (net)             0.0000    21.5244 r
+  u_func_top/u_cm3_proc/u_ahb2apb/oPRDATA_1[26] (ahb2apb)         0.0000    21.5244 r
+  u_func_top/u_cm3_proc/prdata_i2cs[26] (net)                     0.0000    21.5244 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/iPRDATA[26] (i2cs_ahbm_apbm)   0.0000  21.5244 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/iPRDATA[26] (net)        0.0000    21.5244 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/U375/A (NAND2_X2M_A12TR)   0.0115   0.0000  21.5244 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/U375/Y (NAND2_X2M_A12TR)   0.0181   0.0118  21.5362 f
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/n1364 (net)     1        0.0000    21.5362 f
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/U32/A (NAND2_X1A_A12TR)   0.0181   0.0000  21.5362 f
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/U32/Y (NAND2_X1A_A12TR)   0.0213   0.0203  21.5565 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/n827 (net)     1         0.0000    21.5565 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/reg_rdata_apb_reg_26_/D (DFFRPQ_X3M_A12TR)   0.0213   0.0000  21.5565 r
+  data arrival time                                                         21.5565
+
+  clock APB_CLK_D22 (rise edge)                                  22.0000    22.0000
+  clock network delay (ideal)                                     0.0000    22.0000
+  clock uncertainty                                              -0.8800    21.1200
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/reg_rdata_apb_reg_26_/CK (DFFRPQ_X3M_A12TR)   0.0000  21.1200 r
+  library setup time                                             -0.0505    21.0695
+  data required time                                                        21.0695
+  ------------------------------------------------------------------------------------
+  data required time                                                        21.0695
+  data arrival time                                                        -21.5565
+  ------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                          -0.4869
+
+
+  Startpoint: u_func_top/u_ddr_if/u_uniquify_phy
+              (rising edge-triggered flip-flop clocked by u_func_top/u_ddr_if/u_uniquify_phy/half_rate_clk_addr_phy)
+  Endpoint: u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/reg_rdata_apb_reg_26_
+            (rising edge-triggered flip-flop clocked by APB_CLK_D41)
+  Path Group: APB_CLK_D41
+  Path Type: max
+
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock u_func_top/u_ddr_if/u_uniquify_phy/half_rate_clk_addr_phy (rise edge)  20.6250  20.6250
+  clock network delay (ideal)                                     0.0000    20.6250
+  u_func_top/u_ddr_if/u_uniquify_phy/half_rate_clk_addr_phy (dfi_top_wrapper)   0.0000   0.0000  20.6250 r
+  u_func_top/u_ddr_if/u_uniquify_phy/PRDATA[26] (dfi_top_wrapper)   0.0155   0.8442  21.4692 r
+  u_func_top/u_ddr_if/oPRDATA_PHY[26] (net)     1                 0.0000    21.4692 r
+  u_func_top/u_ddr_if/oPRDATA_PHY[26] (ddr_if)                    0.0000    21.4692 r
+  u_func_top/prdata_phy[26] (net)                                 0.0000    21.4692 r
+  u_func_top/u_cm3_proc/iPRDATA_PHY[26] (cm3_proc_CORE_NO2_AHB_NO7_APB_NO22_SCU_NO1_WDOG_NO1_PWM_NO1_ADC_NO0_TIMER_NO4_GPIO_NO2_UART_NO2_SPI_NO1_I2C_NO2_IRDA_NO0_I2CS_NO1_APB_SLICE4096_CURR_DATE0_CURR_TIME0)   0.0000  21.4692 r
+  u_func_top/u_cm3_proc/iPRDATA_PHY[26] (net)                     0.0000    21.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/iPRDATA14[26] (ahb2apb)         0.0000    21.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/iPRDATA14[26] (net)             0.0000    21.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/PRDATA14[26] (cmsdk_apb_slave_mux_PORT0_ENABLE1_PORT1_ENABLE1_PORT2_ENABLE1_PORT3_ENABLE1_PORT4_ENABLE1_PORT5_ENABLE1_PORT6_ENABLE1_PORT7_ENABLE1_PORT8_ENABLE1_PORT9_ENABLE1_PORT10_ENABLE1_PORT11_ENABLE1_PORT12_ENABLE1_PORT13_ENABLE1_PORT14_ENABLE1_PORT15_ENABLE1)   0.0000  21.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/PRDATA14[26] (net)   0.0000  21.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/U21/A (NAND2_X6M_A12TR)   0.0155   0.0000  21.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/U21/Y (NAND2_X6M_A12TR)   0.0137   0.0139  21.4831 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/n132 (net)     1   0.0000  21.4831 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/U22/A (NAND2_X4A_A12TR)   0.0137   0.0000  21.4831 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/U22/Y (NAND2_X4A_A12TR)   0.0233   0.0170  21.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/PRDATA[26] (net)     1   0.0000  21.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/PRDATA[26] (cmsdk_apb_slave_mux_PORT0_ENABLE1_PORT1_ENABLE1_PORT2_ENABLE1_PORT3_ENABLE1_PORT4_ENABLE1_PORT5_ENABLE1_PORT6_ENABLE1_PORT7_ENABLE1_PORT8_ENABLE1_PORT9_ENABLE1_PORT10_ENABLE1_PORT11_ENABLE1_PORT12_ENABLE1_PORT13_ENABLE1_PORT14_ENABLE1_PORT15_ENABLE1)   0.0000  21.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/prdata[26] (net)                0.0000    21.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/iPRDATA[26] (apb_arb)   0.0000  21.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/iPRDATA[26] (net)     0.0000    21.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/U25/A (INV_X4M_A12TR)   0.0233   0.0000  21.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/U25/Y (INV_X4M_A12TR)   0.0080   0.0125  21.5126 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/n84 (net)     2       0.0000    21.5126 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/U27/A (INV_X2M_A12TR)   0.0080   0.0000  21.5126 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/U27/Y (INV_X2M_A12TR)   0.0115   0.0118  21.5244 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/oPRDATA_1[26] (net)     1   0.0000  21.5244 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/oPRDATA_1[26] (apb_arb)   0.0000  21.5244 r
+  u_func_top/u_cm3_proc/u_ahb2apb/oPRDATA_1[26] (net)             0.0000    21.5244 r
+  u_func_top/u_cm3_proc/u_ahb2apb/oPRDATA_1[26] (ahb2apb)         0.0000    21.5244 r
+  u_func_top/u_cm3_proc/prdata_i2cs[26] (net)                     0.0000    21.5244 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/iPRDATA[26] (i2cs_ahbm_apbm)   0.0000  21.5244 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/iPRDATA[26] (net)        0.0000    21.5244 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/U375/A (NAND2_X2M_A12TR)   0.0115   0.0000  21.5244 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/U375/Y (NAND2_X2M_A12TR)   0.0181   0.0118  21.5362 f
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/n1364 (net)     1        0.0000    21.5362 f
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/U32/A (NAND2_X1A_A12TR)   0.0181   0.0000  21.5362 f
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/U32/Y (NAND2_X1A_A12TR)   0.0213   0.0203  21.5565 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/n827 (net)     1         0.0000    21.5565 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/reg_rdata_apb_reg_26_/D (DFFRPQ_X3M_A12TR)   0.0213   0.0000  21.5565 r
+  data arrival time                                                         21.5565
+
+  clock APB_CLK_D41 (rise edge)                                  22.0000    22.0000
+  clock network delay (ideal)                                     0.0000    22.0000
+  clock uncertainty                                              -0.8800    21.1200
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/reg_rdata_apb_reg_26_/CK (DFFRPQ_X3M_A12TR)   0.0000  21.1200 r
+  library setup time                                             -0.0505    21.0695
+  data required time                                                        21.0695
+  ------------------------------------------------------------------------------------
+  data required time                                                        21.0695
+  data arrival time                                                        -21.5565
+  ------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                          -0.4869
+
+
+  Startpoint: u_func_top/u_ddr_if/u_uniquify_phy
+              (rising edge-triggered flip-flop clocked by u_func_top/u_ddr_if/u_uniquify_phy/half_rate_clk_addr_phy)
+  Endpoint: u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/reg_rdata_apb_reg_26_
+            (rising edge-triggered flip-flop clocked by APB_CLK_D42)
+  Path Group: APB_CLK_D42
+  Path Type: max
+
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock u_func_top/u_ddr_if/u_uniquify_phy/half_rate_clk_addr_phy (rise edge)  42.6250  42.6250
+  clock network delay (ideal)                                     0.0000    42.6250
+  u_func_top/u_ddr_if/u_uniquify_phy/half_rate_clk_addr_phy (dfi_top_wrapper)   0.0000   0.0000  42.6250 r
+  u_func_top/u_ddr_if/u_uniquify_phy/PRDATA[26] (dfi_top_wrapper)   0.0155   0.8442  43.4692 r
+  u_func_top/u_ddr_if/oPRDATA_PHY[26] (net)     1                 0.0000    43.4692 r
+  u_func_top/u_ddr_if/oPRDATA_PHY[26] (ddr_if)                    0.0000    43.4692 r
+  u_func_top/prdata_phy[26] (net)                                 0.0000    43.4692 r
+  u_func_top/u_cm3_proc/iPRDATA_PHY[26] (cm3_proc_CORE_NO2_AHB_NO7_APB_NO22_SCU_NO1_WDOG_NO1_PWM_NO1_ADC_NO0_TIMER_NO4_GPIO_NO2_UART_NO2_SPI_NO1_I2C_NO2_IRDA_NO0_I2CS_NO1_APB_SLICE4096_CURR_DATE0_CURR_TIME0)   0.0000  43.4692 r
+  u_func_top/u_cm3_proc/iPRDATA_PHY[26] (net)                     0.0000    43.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/iPRDATA14[26] (ahb2apb)         0.0000    43.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/iPRDATA14[26] (net)             0.0000    43.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/PRDATA14[26] (cmsdk_apb_slave_mux_PORT0_ENABLE1_PORT1_ENABLE1_PORT2_ENABLE1_PORT3_ENABLE1_PORT4_ENABLE1_PORT5_ENABLE1_PORT6_ENABLE1_PORT7_ENABLE1_PORT8_ENABLE1_PORT9_ENABLE1_PORT10_ENABLE1_PORT11_ENABLE1_PORT12_ENABLE1_PORT13_ENABLE1_PORT14_ENABLE1_PORT15_ENABLE1)   0.0000  43.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/PRDATA14[26] (net)   0.0000  43.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/U21/A (NAND2_X6M_A12TR)   0.0155   0.0000  43.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/U21/Y (NAND2_X6M_A12TR)   0.0137   0.0139  43.4831 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/n132 (net)     1   0.0000  43.4831 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/U22/A (NAND2_X4A_A12TR)   0.0137   0.0000  43.4831 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/U22/Y (NAND2_X4A_A12TR)   0.0233   0.0170  43.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/PRDATA[26] (net)     1   0.0000  43.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/PRDATA[26] (cmsdk_apb_slave_mux_PORT0_ENABLE1_PORT1_ENABLE1_PORT2_ENABLE1_PORT3_ENABLE1_PORT4_ENABLE1_PORT5_ENABLE1_PORT6_ENABLE1_PORT7_ENABLE1_PORT8_ENABLE1_PORT9_ENABLE1_PORT10_ENABLE1_PORT11_ENABLE1_PORT12_ENABLE1_PORT13_ENABLE1_PORT14_ENABLE1_PORT15_ENABLE1)   0.0000  43.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/prdata[26] (net)                0.0000    43.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/iPRDATA[26] (apb_arb)   0.0000  43.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/iPRDATA[26] (net)     0.0000    43.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/U25/A (INV_X4M_A12TR)   0.0233   0.0000  43.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/U25/Y (INV_X4M_A12TR)   0.0080   0.0125  43.5126 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/n84 (net)     2       0.0000    43.5126 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/U27/A (INV_X2M_A12TR)   0.0080   0.0000  43.5126 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/U27/Y (INV_X2M_A12TR)   0.0115   0.0118  43.5244 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/oPRDATA_1[26] (net)     1   0.0000  43.5244 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/oPRDATA_1[26] (apb_arb)   0.0000  43.5244 r
+  u_func_top/u_cm3_proc/u_ahb2apb/oPRDATA_1[26] (net)             0.0000    43.5244 r
+  u_func_top/u_cm3_proc/u_ahb2apb/oPRDATA_1[26] (ahb2apb)         0.0000    43.5244 r
+  u_func_top/u_cm3_proc/prdata_i2cs[26] (net)                     0.0000    43.5244 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/iPRDATA[26] (i2cs_ahbm_apbm)   0.0000  43.5244 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/iPRDATA[26] (net)        0.0000    43.5244 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/U375/A (NAND2_X2M_A12TR)   0.0115   0.0000  43.5244 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/U375/Y (NAND2_X2M_A12TR)   0.0181   0.0118  43.5362 f
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/n1364 (net)     1        0.0000    43.5362 f
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/U32/A (NAND2_X1A_A12TR)   0.0181   0.0000  43.5362 f
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/U32/Y (NAND2_X1A_A12TR)   0.0213   0.0203  43.5565 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/n827 (net)     1         0.0000    43.5565 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/reg_rdata_apb_reg_26_/D (DFFRPQ_X3M_A12TR)   0.0213   0.0000  43.5565 r
+  data arrival time                                                         43.5565
+
+  clock APB_CLK_D42 (rise edge)                                  44.0000    44.0000
+  clock network delay (ideal)                                     0.0000    44.0000
+  clock uncertainty                                              -1.1000    42.9000
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/reg_rdata_apb_reg_26_/CK (DFFRPQ_X3M_A12TR)   0.0000  42.9000 r
+  library setup time                                             -0.0505    42.8495
+  data required time                                                        42.8495
+  ------------------------------------------------------------------------------------
+  data required time                                                        42.8495
+  data arrival time                                                        -43.5565
+  ------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                          -0.7070
+
+
+  Startpoint: u_func_top/u_ddr_if/u_uniquify_phy
+              (rising edge-triggered flip-flop clocked by u_func_top/u_ddr_if/u_uniquify_phy/half_rate_clk_addr_phy)
+  Endpoint: u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/reg_rdata_apb_reg_26_
+            (rising edge-triggered flip-flop clocked by APB_CLK_D81)
+  Path Group: APB_CLK_D81
+  Path Type: max
+
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock u_func_top/u_ddr_if/u_uniquify_phy/half_rate_clk_addr_phy (rise edge)  42.6250  42.6250
+  clock network delay (ideal)                                     0.0000    42.6250
+  u_func_top/u_ddr_if/u_uniquify_phy/half_rate_clk_addr_phy (dfi_top_wrapper)   0.0000   0.0000  42.6250 r
+  u_func_top/u_ddr_if/u_uniquify_phy/PRDATA[26] (dfi_top_wrapper)   0.0155   0.8442  43.4692 r
+  u_func_top/u_ddr_if/oPRDATA_PHY[26] (net)     1                 0.0000    43.4692 r
+  u_func_top/u_ddr_if/oPRDATA_PHY[26] (ddr_if)                    0.0000    43.4692 r
+  u_func_top/prdata_phy[26] (net)                                 0.0000    43.4692 r
+  u_func_top/u_cm3_proc/iPRDATA_PHY[26] (cm3_proc_CORE_NO2_AHB_NO7_APB_NO22_SCU_NO1_WDOG_NO1_PWM_NO1_ADC_NO0_TIMER_NO4_GPIO_NO2_UART_NO2_SPI_NO1_I2C_NO2_IRDA_NO0_I2CS_NO1_APB_SLICE4096_CURR_DATE0_CURR_TIME0)   0.0000  43.4692 r
+  u_func_top/u_cm3_proc/iPRDATA_PHY[26] (net)                     0.0000    43.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/iPRDATA14[26] (ahb2apb)         0.0000    43.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/iPRDATA14[26] (net)             0.0000    43.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/PRDATA14[26] (cmsdk_apb_slave_mux_PORT0_ENABLE1_PORT1_ENABLE1_PORT2_ENABLE1_PORT3_ENABLE1_PORT4_ENABLE1_PORT5_ENABLE1_PORT6_ENABLE1_PORT7_ENABLE1_PORT8_ENABLE1_PORT9_ENABLE1_PORT10_ENABLE1_PORT11_ENABLE1_PORT12_ENABLE1_PORT13_ENABLE1_PORT14_ENABLE1_PORT15_ENABLE1)   0.0000  43.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/PRDATA14[26] (net)   0.0000  43.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/U21/A (NAND2_X6M_A12TR)   0.0155   0.0000  43.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/U21/Y (NAND2_X6M_A12TR)   0.0137   0.0139  43.4831 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/n132 (net)     1   0.0000  43.4831 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/U22/A (NAND2_X4A_A12TR)   0.0137   0.0000  43.4831 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/U22/Y (NAND2_X4A_A12TR)   0.0233   0.0170  43.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/PRDATA[26] (net)     1   0.0000  43.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/PRDATA[26] (cmsdk_apb_slave_mux_PORT0_ENABLE1_PORT1_ENABLE1_PORT2_ENABLE1_PORT3_ENABLE1_PORT4_ENABLE1_PORT5_ENABLE1_PORT6_ENABLE1_PORT7_ENABLE1_PORT8_ENABLE1_PORT9_ENABLE1_PORT10_ENABLE1_PORT11_ENABLE1_PORT12_ENABLE1_PORT13_ENABLE1_PORT14_ENABLE1_PORT15_ENABLE1)   0.0000  43.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/prdata[26] (net)                0.0000    43.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/iPRDATA[26] (apb_arb)   0.0000  43.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/iPRDATA[26] (net)     0.0000    43.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/U25/A (INV_X4M_A12TR)   0.0233   0.0000  43.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/U25/Y (INV_X4M_A12TR)   0.0080   0.0125  43.5126 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/n84 (net)     2       0.0000    43.5126 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/U27/A (INV_X2M_A12TR)   0.0080   0.0000  43.5126 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/U27/Y (INV_X2M_A12TR)   0.0115   0.0118  43.5244 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/oPRDATA_1[26] (net)     1   0.0000  43.5244 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/oPRDATA_1[26] (apb_arb)   0.0000  43.5244 r
+  u_func_top/u_cm3_proc/u_ahb2apb/oPRDATA_1[26] (net)             0.0000    43.5244 r
+  u_func_top/u_cm3_proc/u_ahb2apb/oPRDATA_1[26] (ahb2apb)         0.0000    43.5244 r
+  u_func_top/u_cm3_proc/prdata_i2cs[26] (net)                     0.0000    43.5244 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/iPRDATA[26] (i2cs_ahbm_apbm)   0.0000  43.5244 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/iPRDATA[26] (net)        0.0000    43.5244 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/U375/A (NAND2_X2M_A12TR)   0.0115   0.0000  43.5244 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/U375/Y (NAND2_X2M_A12TR)   0.0181   0.0118  43.5362 f
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/n1364 (net)     1        0.0000    43.5362 f
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/U32/A (NAND2_X1A_A12TR)   0.0181   0.0000  43.5362 f
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/U32/Y (NAND2_X1A_A12TR)   0.0213   0.0203  43.5565 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/n827 (net)     1         0.0000    43.5565 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/reg_rdata_apb_reg_26_/D (DFFRPQ_X3M_A12TR)   0.0213   0.0000  43.5565 r
+  data arrival time                                                         43.5565
+
+  clock APB_CLK_D81 (rise edge)                                  44.0000    44.0000
+  clock network delay (ideal)                                     0.0000    44.0000
+  clock uncertainty                                              -1.1000    42.9000
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/reg_rdata_apb_reg_26_/CK (DFFRPQ_X3M_A12TR)   0.0000  42.9000 r
+  library setup time                                             -0.0505    42.8495
+  data required time                                                        42.8495
+  ------------------------------------------------------------------------------------
+  data required time                                                        42.8495
+  data arrival time                                                        -43.5565
+  ------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                          -0.7070
+
+
+  Startpoint: u_func_top/u_ddr_if/u_uniquify_phy
+              (rising edge-triggered flip-flop clocked by u_func_top/u_ddr_if/u_uniquify_phy/half_rate_clk_addr_phy)
+  Endpoint: u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/reg_rdata_apb_reg_26_
+            (rising edge-triggered flip-flop clocked by APB_CLK_D82)
+  Path Group: APB_CLK_D82
+  Path Type: max
+
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock u_func_top/u_ddr_if/u_uniquify_phy/half_rate_clk_addr_phy (rise edge)  86.6250  86.6250
+  clock network delay (ideal)                                     0.0000    86.6250
+  u_func_top/u_ddr_if/u_uniquify_phy/half_rate_clk_addr_phy (dfi_top_wrapper)   0.0000   0.0000  86.6250 r
+  u_func_top/u_ddr_if/u_uniquify_phy/PRDATA[26] (dfi_top_wrapper)   0.0155   0.8442  87.4692 r
+  u_func_top/u_ddr_if/oPRDATA_PHY[26] (net)     1                 0.0000    87.4692 r
+  u_func_top/u_ddr_if/oPRDATA_PHY[26] (ddr_if)                    0.0000    87.4692 r
+  u_func_top/prdata_phy[26] (net)                                 0.0000    87.4692 r
+  u_func_top/u_cm3_proc/iPRDATA_PHY[26] (cm3_proc_CORE_NO2_AHB_NO7_APB_NO22_SCU_NO1_WDOG_NO1_PWM_NO1_ADC_NO0_TIMER_NO4_GPIO_NO2_UART_NO2_SPI_NO1_I2C_NO2_IRDA_NO0_I2CS_NO1_APB_SLICE4096_CURR_DATE0_CURR_TIME0)   0.0000  87.4692 r
+  u_func_top/u_cm3_proc/iPRDATA_PHY[26] (net)                     0.0000    87.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/iPRDATA14[26] (ahb2apb)         0.0000    87.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/iPRDATA14[26] (net)             0.0000    87.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/PRDATA14[26] (cmsdk_apb_slave_mux_PORT0_ENABLE1_PORT1_ENABLE1_PORT2_ENABLE1_PORT3_ENABLE1_PORT4_ENABLE1_PORT5_ENABLE1_PORT6_ENABLE1_PORT7_ENABLE1_PORT8_ENABLE1_PORT9_ENABLE1_PORT10_ENABLE1_PORT11_ENABLE1_PORT12_ENABLE1_PORT13_ENABLE1_PORT14_ENABLE1_PORT15_ENABLE1)   0.0000  87.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/PRDATA14[26] (net)   0.0000  87.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/U21/A (NAND2_X6M_A12TR)   0.0155   0.0000  87.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/U21/Y (NAND2_X6M_A12TR)   0.0137   0.0139  87.4831 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/n132 (net)     1   0.0000  87.4831 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/U22/A (NAND2_X4A_A12TR)   0.0137   0.0000  87.4831 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/U22/Y (NAND2_X4A_A12TR)   0.0233   0.0170  87.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/PRDATA[26] (net)     1   0.0000  87.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/PRDATA[26] (cmsdk_apb_slave_mux_PORT0_ENABLE1_PORT1_ENABLE1_PORT2_ENABLE1_PORT3_ENABLE1_PORT4_ENABLE1_PORT5_ENABLE1_PORT6_ENABLE1_PORT7_ENABLE1_PORT8_ENABLE1_PORT9_ENABLE1_PORT10_ENABLE1_PORT11_ENABLE1_PORT12_ENABLE1_PORT13_ENABLE1_PORT14_ENABLE1_PORT15_ENABLE1)   0.0000  87.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/prdata[26] (net)                0.0000    87.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/iPRDATA[26] (apb_arb)   0.0000  87.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/iPRDATA[26] (net)     0.0000    87.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/U25/A (INV_X4M_A12TR)   0.0233   0.0000  87.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/U25/Y (INV_X4M_A12TR)   0.0080   0.0125  87.5126 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/n84 (net)     2       0.0000    87.5126 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/U27/A (INV_X2M_A12TR)   0.0080   0.0000  87.5126 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/U27/Y (INV_X2M_A12TR)   0.0115   0.0118  87.5244 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/oPRDATA_1[26] (net)     1   0.0000  87.5244 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/oPRDATA_1[26] (apb_arb)   0.0000  87.5244 r
+  u_func_top/u_cm3_proc/u_ahb2apb/oPRDATA_1[26] (net)             0.0000    87.5244 r
+  u_func_top/u_cm3_proc/u_ahb2apb/oPRDATA_1[26] (ahb2apb)         0.0000    87.5244 r
+  u_func_top/u_cm3_proc/prdata_i2cs[26] (net)                     0.0000    87.5244 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/iPRDATA[26] (i2cs_ahbm_apbm)   0.0000  87.5244 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/iPRDATA[26] (net)        0.0000    87.5244 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/U375/A (NAND2_X2M_A12TR)   0.0115   0.0000  87.5244 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/U375/Y (NAND2_X2M_A12TR)   0.0181   0.0118  87.5362 f
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/n1364 (net)     1        0.0000    87.5362 f
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/U32/A (NAND2_X1A_A12TR)   0.0181   0.0000  87.5362 f
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/U32/Y (NAND2_X1A_A12TR)   0.0213   0.0203  87.5565 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/n827 (net)     1         0.0000    87.5565 r
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/reg_rdata_apb_reg_26_/D (DFFRPQ_X3M_A12TR)   0.0213   0.0000  87.5565 r
+  data arrival time                                                         87.5565
+
+  clock APB_CLK_D82 (rise edge)                                  88.0000    88.0000
+  clock network delay (ideal)                                     0.0000    88.0000
+  clock uncertainty                                              -1.3200    86.6800
+  u_func_top/u_cm3_proc/u_i2cs_ahbm_apbm/reg_rdata_apb_reg_26_/CK (DFFRPQ_X3M_A12TR)   0.0000  86.6800 r
+  library setup time                                             -0.0505    86.6295
+  data required time                                                        86.6295
+  ------------------------------------------------------------------------------------
+  data required time                                                        86.6295
+  data arrival time                                                        -87.5565
+  ------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                          -0.9269
+
+
+  Startpoint: u_func_top/u_ddr_if/u_uniquify_phy
+              (rising edge-triggered flip-flop clocked by u_func_top/u_ddr_if/u_uniquify_phy/half_rate_clk_addr_phy)
+  Endpoint: u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_to_apb/rwdata_reg_reg_26_
+            (rising edge-triggered flip-flop clocked by CORE_CLK_D8)
+  Path Group: CORE_CLK_D8
+  Path Type: max
+
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock u_func_top/u_ddr_if/u_uniquify_phy/half_rate_clk_addr_phy (rise edge)   9.6250   9.6250
+  clock network delay (ideal)                                     0.0000     9.6250
+  u_func_top/u_ddr_if/u_uniquify_phy/half_rate_clk_addr_phy (dfi_top_wrapper)   0.0000   0.0000   9.6250 r
+  u_func_top/u_ddr_if/u_uniquify_phy/PRDATA[26] (dfi_top_wrapper)   0.0155   0.8442  10.4692 r
+  u_func_top/u_ddr_if/oPRDATA_PHY[26] (net)     1                 0.0000    10.4692 r
+  u_func_top/u_ddr_if/oPRDATA_PHY[26] (ddr_if)                    0.0000    10.4692 r
+  u_func_top/prdata_phy[26] (net)                                 0.0000    10.4692 r
+  u_func_top/u_cm3_proc/iPRDATA_PHY[26] (cm3_proc_CORE_NO2_AHB_NO7_APB_NO22_SCU_NO1_WDOG_NO1_PWM_NO1_ADC_NO0_TIMER_NO4_GPIO_NO2_UART_NO2_SPI_NO1_I2C_NO2_IRDA_NO0_I2CS_NO1_APB_SLICE4096_CURR_DATE0_CURR_TIME0)   0.0000  10.4692 r
+  u_func_top/u_cm3_proc/iPRDATA_PHY[26] (net)                     0.0000    10.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/iPRDATA14[26] (ahb2apb)         0.0000    10.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/iPRDATA14[26] (net)             0.0000    10.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/PRDATA14[26] (cmsdk_apb_slave_mux_PORT0_ENABLE1_PORT1_ENABLE1_PORT2_ENABLE1_PORT3_ENABLE1_PORT4_ENABLE1_PORT5_ENABLE1_PORT6_ENABLE1_PORT7_ENABLE1_PORT8_ENABLE1_PORT9_ENABLE1_PORT10_ENABLE1_PORT11_ENABLE1_PORT12_ENABLE1_PORT13_ENABLE1_PORT14_ENABLE1_PORT15_ENABLE1)   0.0000  10.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/PRDATA14[26] (net)   0.0000  10.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/U21/A (NAND2_X6M_A12TR)   0.0155   0.0000  10.4692 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/U21/Y (NAND2_X6M_A12TR)   0.0137   0.0139  10.4831 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/n132 (net)     1   0.0000  10.4831 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/U22/A (NAND2_X4A_A12TR)   0.0137   0.0000  10.4831 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/U22/Y (NAND2_X4A_A12TR)   0.0233   0.0170  10.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/PRDATA[26] (net)     1   0.0000  10.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_slave_mux/PRDATA[26] (cmsdk_apb_slave_mux_PORT0_ENABLE1_PORT1_ENABLE1_PORT2_ENABLE1_PORT3_ENABLE1_PORT4_ENABLE1_PORT5_ENABLE1_PORT6_ENABLE1_PORT7_ENABLE1_PORT8_ENABLE1_PORT9_ENABLE1_PORT10_ENABLE1_PORT11_ENABLE1_PORT12_ENABLE1_PORT13_ENABLE1_PORT14_ENABLE1_PORT15_ENABLE1)   0.0000  10.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/prdata[26] (net)                0.0000    10.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/iPRDATA[26] (apb_arb)   0.0000  10.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/iPRDATA[26] (net)     0.0000    10.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/U25/A (INV_X4M_A12TR)   0.0233   0.0000  10.5001 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/U25/Y (INV_X4M_A12TR)   0.0080   0.0125  10.5126 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/n84 (net)     2       0.0000    10.5126 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/U12/A (INV_X1B_A12TR_C34)   0.0080   0.0000  10.5126 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/U12/Y (INV_X1B_A12TR_C34)   0.0144   0.0142  10.5268 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/oPRDATA_0[26] (net)     1   0.0000  10.5268 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_apb_arb/oPRDATA_0[26] (apb_arb)   0.0000  10.5268 r
+  u_func_top/u_cm3_proc/u_ahb2apb/prdata_0[26] (net)              0.0000    10.5268 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_to_apb/PRDATA[26] (cmsdk_ahb_to_apb_ADDRWIDTH32_REGISTER_RDATA1_REGISTER_WDATA0)   0.0000  10.5268 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_to_apb/PRDATA[26] (net)   0.0000  10.5268 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_to_apb/U48/A (NAND2_X1A_A12TR)   0.0144   0.0000  10.5268 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_to_apb/U48/Y (NAND2_X1A_A12TR)   0.0174   0.0157  10.5425 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_to_apb/n261 (net)     1   0.0000  10.5425 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_to_apb/U51/B (NAND2_X1A_A12TR)   0.0174   0.0000  10.5425 f
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_to_apb/U51/Y (NAND2_X1A_A12TR)   0.0200   0.0219  10.5644 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_to_apb/n90 (net)     1   0.0000  10.5644 r
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_to_apb/rwdata_reg_reg_26_/D (DFFRPQ_X3M_A12TR)   0.0200   0.0000  10.5644 r
+  data arrival time                                                         10.5644
+
+  clock CORE_CLK_D8 (rise edge)                                  11.0000    11.0000
+  clock network delay (ideal)                                     0.0000    11.0000
+  clock uncertainty                                              -0.5500    10.4500
+  u_func_top/u_cm3_proc/u_ahb2apb/u_cmsdk_apb_to_apb/rwdata_reg_reg_26_/CK (DFFRPQ_X3M_A12TR)   0.0000  10.4500 r
+  library setup time                                             -0.0500    10.4000
+  data required time                                                        10.4000
+  ------------------------------------------------------------------------------------
+  data required time                                                        10.4000
+  data arrival time                                                        -10.5644
+  ------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                          -0.1645
+
+
+  Startpoint: u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_active/wt0_actv_data_reg_52_
+              (rising edge-triggered flip-flop clocked by MCLK)
+  Endpoint: u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/sum_out_d0_d1_reg_18_
+            (rising edge-triggered flip-flop clocked by MCLK)
+  Path Group: MCLK
+  Path Type: max
+
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock MCLK (rise edge)                                          0.0000     0.0000
+  clock network delay (ideal)                                     0.0000     0.0000
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_active/wt0_actv_data_reg_52_/CK (DFFQ_X4M_A12TR)   0.0000   0.0000   0.0000 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_active/wt0_actv_data_reg_52_/Q (DFFQ_X4M_A12TR)   0.0126   0.1053   0.1053 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_active/wt0_actv_data[52] (net)     2   0.0000   0.1053 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_active/wt0_actv_data[52] (UX_DLA_CMAC_CORE_active_0)   0.0000   0.1053 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/wt0_actv_data[52] (net)   0.0000   0.1053 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/wt_actv_data[52] (UX_DLA_CMAC_CORE_mac_3)   0.0000   0.1053 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/wt_actv_data[52] (net)   0.0000   0.1053 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/U1807/B (XNOR2_X4M_A12TR)   0.0126   0.0000   0.1053 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/U1807/Y (XNOR2_X4M_A12TR)   0.0918   0.0570   0.1623 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/n8630 (net)    11   0.0000   0.1623 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/U2542/A (NAND2_X2A_A12TR)   0.0918   0.0000   0.1623 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/U2542/Y (NAND2_X2A_A12TR)   0.0473   0.0561   0.2183 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/n8628 (net)     9   0.0000   0.2183 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/U3786/B0 (OAI22_X1P4M_A12TR)   0.0473   0.0000   0.2183 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/U3786/Y (OAI22_X1P4M_A12TR)   0.0712   0.0589   0.2773 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/mult_x_7_n168 (net)     1   0.0000   0.2773 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/mult_x_7_U137/A (CMPR42_X1M_A12TR)   0.0712   0.0000   0.2773 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/mult_x_7_U137/SUM (CMPR42_X1M_A12TR)   0.0304   0.2410   0.5182 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/mult_x_7_n128 (net)     2   0.0000   0.5182 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/U3272/A (NOR2_X2B_A12TR)   0.0304   0.0000   0.5182 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/U3272/Y (NOR2_X2B_A12TR)   0.0542   0.0460   0.5642 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/n4095 (net)     3   0.0000   0.5642 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/U122/A1 (OAI21_X3M_A12TR)   0.0542   0.0000   0.5642 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/U122/Y (OAI21_X3M_A12TR)   0.0269   0.0418   0.6060 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/n5088 (net)     5   0.0000   0.6060 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/U3122/A0 (AOI21_X1M_A12TR)   0.0269   0.0000   0.6060 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/U3122/Y (AOI21_X1M_A12TR)   0.0446   0.0466   0.6526 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/n607 (net)     1   0.0000   0.6526 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/U8982/B0 (OAI21_X2M_A12TR)   0.0446   0.0000   0.6526 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/U8982/Y (OAI21_X2M_A12TR)   0.0217   0.0302   0.6828 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/n9152 (net)     1   0.0000   0.6828 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/U8981/A (XNOR2_X1M_A12TR)   0.0217   0.0000   0.6828 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/U8981/Y (XNOR2_X1M_A12TR)   0.0293   0.0401   0.7229 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/n5092 (net)     1   0.0000   0.7229 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/U1096/A (NAND2_X2A_A12TR)   0.0293   0.0000   0.7229 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/U1096/Y (NAND2_X2A_A12TR)   0.0268   0.0228   0.7458 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/n9284 (net)     1   0.0000   0.7458 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/U1845/A (INV_X1P4M_A12TR)   0.0268   0.0000   0.7458 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/U1845/Y (INV_X1P4M_A12TR)   0.0149   0.0199   0.7657 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/n5187 (net)     1   0.0000   0.7657 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/U8216/A (ADDF_X1M_A12TR)   0.0149   0.0000   0.7657 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/U8216/S (ADDF_X1M_A12TR)   0.0589   0.1344   0.9001 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/n5240 (net)     3   0.0000   0.9001 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/U3184/A (XOR2_X2M_A12TR)   0.0589   0.0000   0.9001 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/U3184/Y (XOR2_X2M_A12TR)   0.0752   0.0555   0.9556 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/n9135 (net)     1   0.0000   0.9556 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/U8962/A (XOR2_X3M_A12TR)   0.0752   0.0000   0.9556 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/U8962/Y (XOR2_X3M_A12TR)   0.0656   0.0585   1.0141 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/n5629 (net)     1   0.0000   1.0141 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/U8302/A (ADDF_X1M_A12TR)   0.0656   0.0000   1.0141 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/U8302/S (ADDF_X1M_A12TR)   0.0318   0.1223   1.1364 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/n6282 (net)     1   0.0000   1.1364 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/U8378/CI (ADDF_X1M_A12TR)   0.0318   0.0000   1.1364 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/U8378/S (ADDF_X1M_A12TR)   0.0349   0.1241   1.2605 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/n7137 (net)     3   0.0000   1.2605 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/U1779/A0 (OAI21_X1M_A12TR)   0.0349   0.0000   1.2605 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/U1779/Y (OAI21_X1M_A12TR)   0.0382   0.0434   1.3039 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/n1637 (net)     1   0.0000   1.3039 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/U779/A (NAND2_X1B_A12TR)   0.0382   0.0000   1.3039 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/U779/Y (NAND2_X1B_A12TR)   0.0184   0.0234   1.3273 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/n6879 (net)     1   0.0000   1.3273 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/U8470/A (ADDFH_X1M_A12TR)   0.0184   0.0000   1.3273 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/U8470/CO (ADDFH_X1M_A12TR)   0.0289   0.1462   1.4735 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/n7806 (net)     2   0.0000   1.4735 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/U1336/A (NOR2_X4A_A12TR)   0.0289   0.0000   1.4735 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/U1336/Y (NOR2_X4A_A12TR)   0.0359   0.0354   1.5089 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/n7900 (net)     3   0.0000   1.5089 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/U9/A0 (OAI21_X3M_A12TR)   0.0359   0.0000   1.5089 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/U9/Y (OAI21_X3M_A12TR)   0.0227   0.0308   1.5396 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/n7892 (net)     3   0.0000   1.5396 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/U1152/A1 (AOI21_X2M_A12TR)   0.0227   0.0000   1.5396 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/U1152/Y (AOI21_X2M_A12TR)   0.0354   0.0438   1.5835 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/n519 (net)     1   0.0000   1.5835 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/U2980/B0 (OAI21_X3M_A12TR)   0.0354   0.0000   1.5835 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/U2980/Y (OAI21_X3M_A12TR)   0.0262   0.0312   1.6147 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/n1539 (net)     4   0.0000   1.6147 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/U7935/A0 (AOI21_X2M_A12TR)   0.0262   0.0000   1.6147 f
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/U7935/Y (AOI21_X2M_A12TR)   0.0340   0.0405   1.6553 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/n7965 (net)     1   0.0000   1.6553 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/U8692/A (XOR2_X1M_A12TR)   0.0340   0.0000   1.6553 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/U8692/Y (XOR2_X1M_A12TR)   0.0586   0.0384   1.6937 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/sum_out[18] (net)     1   0.0000   1.6937 r
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/sum_out_d0_d1_reg_18_/D (DFFQ_X3M_A12TR)   0.0586   0.0000   1.6937 r
+  data arrival time                                                          1.6937
+
+  clock MCLK (rise edge)                                          1.3750     1.3750
+  clock network delay (ideal)                                     0.0000     1.3750
+  clock uncertainty                                              -0.0688     1.3062
+  u_func_top/u_nxsf_top/uxdla_top/u_core_mb/u_UX_DLA_cmac/u_core/u_mac_0/sum_out_d0_d1_reg_18_/CK (DFFQ_X3M_A12TR)   0.0000   1.3062 r
+  library setup time                                             -0.0422     1.2641
+  data required time                                                         1.2641
+  ------------------------------------------------------------------------------------
+  data required time                                                         1.2641
+  data arrival time                                                         -1.6937
+  ------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                          -0.4296
+
+
+1

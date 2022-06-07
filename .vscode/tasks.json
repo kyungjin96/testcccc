@@ -21,12 +21,13 @@
         },
         {
             "type": "cppbuild",
-            "label": "C/C++: g++ build active file",
+            "label": "g++ build active file",
             "command": "/usr/bin/g++",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
                 "-std=c++11",
+                // "-std=gnu++0x",
                 "${file}",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"

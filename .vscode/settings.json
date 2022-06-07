@@ -67,6 +67,7 @@
         "optional": "cpp",
         "iterator": "cpp",
         "memory_resource": "cpp",
-        "bit": "cpp"
+        "bit": "cpp",
+        "map": "cpp"
     }
 }
